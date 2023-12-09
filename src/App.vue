@@ -5,9 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const vvv = "dddd";
+
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

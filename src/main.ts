@@ -1,10 +1,23 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import App from '@/App.vue'
 
-createApp(App).mount('#app')
+//@ts-ignore
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
-const fun = () => {
-  console.log('ddddd')
-}
+const app = createApp(App)
 
-fun()
+app.use(ElementPlus, {
+  locale: zhCn,
+})
+
+import 'virtual:svg-icons-register'
+import SvgIcon from '@/components/SvgIcon/index.vue'
+app.component('SvgIcon', SvgIcon)
+
+import gloablComponent from '@/components/index'
+app.use(gloablComponent)
+import '@/styles/index.scss'
+
+app.mount('#app')

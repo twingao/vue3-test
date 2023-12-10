@@ -12,10 +12,6 @@ app.use(ElementPlus, {
   locale: zhCn,
 })
 
-import 'virtual:svg-icons-register'
-import SvgIcon from '@/components/SvgIcon/index.vue'
-app.component('SvgIcon', SvgIcon)
-
 import gloablComponent from '@/components/index'
 app.use(gloablComponent)
 import '@/styles/index.scss'
